@@ -4,7 +4,7 @@
       <div class="row">
         <div class="w-100 text-center">
           <h1 class="video-title">
-            Deep State Defender VPN:<br />
+            Datacappy VPN & Browser:<br />
             One tap and you are protected!
           </h1>
           <div class="embed-responsive embed-responsive-16by9">

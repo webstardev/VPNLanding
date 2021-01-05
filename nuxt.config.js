@@ -4,7 +4,7 @@ import axios from 'axios';
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "Deep State Defender VPN",
+    title: "Datacappy VPN & Browser",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -15,7 +15,11 @@ export default {
           "The ultimate combination of security tools to keep your online activity anonymous and encrypted."
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
+      // { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' }
+    ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

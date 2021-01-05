@@ -1,7 +1,7 @@
 <template>
   <div>
     <BannerTitle
-      title="Deep State Defender VPN"
+      title="Datacappy VPN & Browser"
       description="Take back your data!"
     />
 

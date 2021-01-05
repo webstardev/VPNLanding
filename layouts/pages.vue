@@ -1,10 +1,9 @@
 <template>
-  <div class="container-fluid pages-layout">
+  <div class="container-fluid pages-layout px-0">
     <Header />
     <Nuxt />
     <Footer />
-    <client-only><Cookie /></client-only>
-    
+    <client-only><Cookie /></client-only>    
   </div>
 </template>
 

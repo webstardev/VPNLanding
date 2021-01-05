@@ -45,7 +45,6 @@ $theme-colors: (primary: $black, secondary: $gray-600, success: $green, info: $c
   }
 
   .pages-layout {
-    background: linear-gradient(0deg, #1f2022, #1f2022), #1d1d1d;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -66,6 +65,10 @@ $theme-colors: (primary: $black, secondary: $gray-600, success: $green, info: $c
   .small-container {
     max-width: 800px;
     margin: auto;
+  }
+
+  .vpn-container {
+    max-width: 1280px !important;
   }
 
 //then bootstrap & bootstrap-vue should be added after 

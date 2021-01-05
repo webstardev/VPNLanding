@@ -103,23 +103,10 @@
               href="https://play.google.com/store/apps/details?id=com.blindcut.dsdefender.vpn"
               target="_new"
               ><img
-                :src="require('../assets/footer-google.png')"
+                :src="require('../assets/logo.svg')"
                 role="button"
                 class="pr-2 pb-2"
             /></a>
-            <a href="https://apps.apple.com/us/app/id1501838199" target="_new"
-              ><img
-                :src="require('../assets/footer-app.png')"
-                role="button"
-                class="pr-2 pb-2"
-            /></a>
-            <a href="https://apps.apple.com/us/app/id1501838199" target="_new"
-              ><img
-                :src="require('../assets/footer-mac.png')"
-                role="button"
-                class="pr-2 pb-2"
-            /></a>
-            <!-- <img :src="require('../assets/footer-windows.png')" role="button" class="pr-2 pb-2"> -->
           </div>
           <div class="text-center">
             <div class="copyright">
@@ -138,7 +125,10 @@
 
 <style scoped>
 .footer {
-  background: linear-gradient(0deg, #c4c7cd, #c4c7cd), #ffffff;
+  background: #2C5A90;
+  display: flex;
+  align-items: center;
+  height: 100px;
 }
 
 .footer-title {

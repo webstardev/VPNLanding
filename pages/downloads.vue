@@ -9,7 +9,7 @@
       <b-card>
         <b-card-body>
           <b-card-title>
-            <h2 class="text-center">Download Deep State Defender VPN app for Windows</h2>
+            <h2 class="text-center">Download Datacappy VPN & Browser app for Windows</h2>
           </b-card-title>
         </b-card-body>
         <b-card-text class="text-center">
