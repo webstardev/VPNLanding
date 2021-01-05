@@ -136,6 +136,20 @@
         </div>        
       </div>
     </section>
+    
+    <section class="section-six">
+      <div class="container vpn-container">
+        <h3 class="text-center">The Datacappy VPN & Browser</h3>
+        <h6 class="text-center">Datacappy VPN: One tap and you are protected!</h6>
+        <div class="embed-responsive embed-responsive-16by9">
+          <video controls autoplay muted>
+            <source src="../assets/dsd_promo_1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
     <!-- <Smoking />
     <Features />"
     <Video />
@@ -367,6 +381,32 @@ export default {
         margin: 0 40px 0 0;
       }
     }    
+  }
+
+  .section-six {
+    background: rgba(207,218,232,0.3);
+    padding: 112px 0 120px;
+    h3 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 47px;                  
+      text-align: center;
+      color: #0B032D;
+      margin: 0 0 22px 0;
+    }
+    h6 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 35px;      
+      text-align: center;
+      color: #0B032D;
+      margin: 0;
+    }
+    video {
+      margin-top: 80px;
+    }
   }
   
 </style>
