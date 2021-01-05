@@ -113,19 +113,27 @@
 
     <section class="section-five">
       <div class="container vpn-container">
-        <h3>Go Premium and Get:</h3>
-        <div class="check-line">
-          <img src="../assets/check.png" alt="green-check" />
-          Unlimited data
-        </div>
-        <div class="check-line">
-          <img src="../assets/check.png" alt="green-check" />
-          Early release locations
-        </div>
-        <div class="check-line">
-          <img src="../assets/check.png" alt="green-check" />
-          On-Demand coverage: Wi-Fi, cellular or both. You choose!
-        </div>
+        <h3>Go Premium and Get:</h3>        
+        <div class="content">
+          <div class="description-div">
+            <div class="check-line">
+              <img src="../assets/check.png" alt="green-check" />
+              Unlimited data
+            </div>
+            <div class="check-line">
+              <img src="../assets/check.png" alt="green-check" />
+              Early release locations
+            </div>
+            <div class="check-line">
+              <img src="../assets/check.png" alt="green-check" />
+              On-Demand coverage: Wi-Fi, cellular or both. You choose!
+            </div>
+            <app-buttons :wrapperClass="`app-buttons-wrapper`"></app-buttons>
+          </div>                  
+          <div class="logo-div">
+            <img src="../assets/logo.svg" alt="logo" />
+          </div>
+        </div>        
       </div>
     </section>
     <!-- <Smoking />
@@ -214,6 +222,7 @@ export default {
       background-size: 100% 100%;
       background-position: center center;
       margin: 0 auto;
+
       h3 {
         font-family: Montserrat;
         font-style: normal;
@@ -259,7 +268,7 @@ export default {
   }
 
   .section-four {
-    padding-top: 111px;
+    padding: 111px 0 120px;
 
     h3 {
       font-family: Montserrat;
@@ -281,7 +290,50 @@ export default {
     height: 485px;
     background-position: top center;
     background-size: 100% 100%;
-    // background: url('../assets/');
+    background: url('../assets/bg_small.png') no-repeat;
+    padding: 85px 0;
+
+    h3 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 55px;
+      line-height: 50px;
+      color: #98CA4E;
+      margin: 0 0 43px 0;
+    }
+    .content {
+      display: flex;
+
+      .description-div {
+        flex: 1 1 100%;
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 18px;
+        }
+        .check-line {
+          display: flex;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 40px;          
+          color: #DAE5F1;
+        }
+      }
+
+      .logo-div {        
+        flex: 0 0 141px;
+        img {
+          width: 141px;
+          height: 195px;
+        }
+      }
+    }    
+    .app-buttons-wrapper {
+      margin: 28px 0 0 0;
+    }
   }
 
   .list-ul {
