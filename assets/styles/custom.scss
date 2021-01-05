@@ -1,0 +1,76 @@
+// custom.scss
+
+// All of your custom SCSS variables go first
+
+$white: #fff;
+$green: #73fd05;
+$black: #121314;
+$gray-100: #f8f9fa;
+$gray-600: #868e96;
+$gray-800: #1f2022;
+$cyan: #17a2b8;
+$red: #dc3545;
+$yellow: #ffc107;
+
+$link-color: $green;
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: rgba($green,0.9);
+$dropdown-bg: $gray-600;
+$dropdown-link-color: rgba($green,0.9);
+
+$theme-colors: (primary: $black, secondary: $gray-600, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/Roboto-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'RobotoMono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+  }
+
+  .pages-layout {
+    background: linear-gradient(0deg, #1f2022, #1f2022), #1d1d1d;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .f-Montserrat {
+    font-family: "Montserrat";
+  }
+  
+  .f-RobotoMono {
+    font-family: "RobotoMono";
+  }
+   
+  .f-Roboto {
+    font-family: "Roboto";
+  }
+  
+  .small-container {
+    max-width: 800px;
+    margin: auto;
+  }
+
+//then bootstrap & bootstrap-vue should be added after 
+//so that they inherit the custom SCSS variables
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
+
+//all other custom scss files or css should be added here
