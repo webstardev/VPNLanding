@@ -4,7 +4,7 @@
       <div class="main-content">
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
-        <app-buttons :wrapperClass="`app-btn-wrapper`"></app-buttons>
+        <slot></slot>        
       </div>
       <div class="logo-div">
         <img src="../assets/logo.svg" alt="logo"/>      
@@ -14,9 +14,7 @@
 </template>
 
 <script>
-import AppButtons from './AppButtons.vue';
 export default {
-  components: { AppButtons },
   name: "banner-title",
   props: ["title", "description"]
 };
@@ -56,10 +54,6 @@ export default {
     font-size: 26px;    
     color: #0B032D;
     margin: 16px 0 0 0;
-  }
-
-  .app-btn-wrapper {
-    margin: 55px 0 0 0;
   }
 
   .logo-div {

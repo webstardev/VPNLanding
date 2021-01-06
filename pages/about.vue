@@ -3,8 +3,9 @@
     <BannerTitle
       title="About"
       description="Our mission should be your mission."
-    />
-
+    >
+      <app-buttons :wrapperClass="`app-btn-wrapper`"></app-buttons>
+    </BannerTitle>
     <b-container>
       <div class="small-container section wp-content">
         <div class="text-left">
@@ -99,6 +100,10 @@ body .btn {
       color: #1f2022;
     }
   }
+}
+
+.app-btn-wrapper {
+  margin: 55px 0 0 0;
 }
 
 .wp-content {
