@@ -1,25 +1,33 @@
 <template>
 	<div :class="`${wrapperClass} component-container`">
-		<b-button class="btn-app google-play">
+		<a 
+			class="btn-app google-play"
+			href="https://play.google.com/store/apps/details?id=com.blindcut.dsdefender.vpn"
+			target="_new"
+		>
 			<img src="../assets/btn-google-play.png" alt="Google Play"/>
 			<div class="btn-text">
 				<p>ANDROID APP ON</p>
 				<h6>Google Play</h6>
 			</div>
-		</b-button>
-		<b-button class="btn-app apple">
+		</a>
+		<a 
+			class="btn-app apple"
+			href="https://apps.apple.com/us/app/id1501838199" 
+			target="_new"
+		>
 			<img src="../assets/btn-apple.png" alt="Apple"/>
 			<div class="btn-text">
 				<p>DOWNLOAD ON THE</p>
 				<h6>App Store</h6>
 			</div>
-		</b-button>
+		</a>
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'AppButtons',
+		name: 'app-buttons',
 		props: {
 			wrapperClass: {
 				type: String, default: ''

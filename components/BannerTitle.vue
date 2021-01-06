@@ -1,16 +1,22 @@
 <template>
-  <div>
-    <div class="banner-title bg-primary f-Montserrat">
-      <div class="container text-center">
+  <div class="banner-title f-Montserrat">
+    <div class="container vpn-container">      
+      <div class="main-content">
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
+        <app-buttons :wrapperClass="`app-btn-wrapper`"></app-buttons>
       </div>
+      <div class="logo-div">
+        <img src="../assets/logo.svg" alt="logo"/>      
+      </div>      
     </div>
   </div>
 </template>
 
 <script>
+import AppButtons from './AppButtons.vue';
 export default {
+  components: { AppButtons },
   name: "banner-title",
   props: ["title", "description"]
 };
@@ -18,21 +24,52 @@ export default {
 
 
 <style lang="scss" scoped>
-.banner-title {
-  padding-top: 50px;
-  padding-bottom: 76px;
-  color: white;
-  display: flex;
-  font-weight: 300;
-  h1 {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 56px;
-    font-weight: 600;
+.banner-title {    
+  display: flex;  
+  background-image: url('../assets/bg-2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: rgba(207,218,232,0.3);
+  width: 100%;
+  height: 395px;
+  padding-top: 76px;
+
+  .vpn-container {
+    display: flex;
+
   }
+
+  h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 53px;    
+    color: #0B032D;
+    margin: 0;
+  }
+
   p {
-    margin-bottom: 0px;
-    font-size: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;    
+    color: #0B032D;
+    margin: 16px 0 0 0;
+  }
+
+  .app-btn-wrapper {
+    margin: 55px 0 0 0;
+  }
+
+  .logo-div {
+    width: 137px;
+    height: 350px;
+    margin-left: auto;
+    flex: 0 0 137px;
+    img {
+      width: 100%;
+    }
   }
 
   @media (max-width: 991px) {
