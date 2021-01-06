@@ -34,7 +34,7 @@
 	}
 
 	.btn-app {
-		background: #98CA4E;
+		background: #98CA4E !important;
 		border-radius: 25px;
 		padding: 0;
 		display: flex;

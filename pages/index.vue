@@ -150,6 +150,164 @@
       </div>
     </section>
 
+    <section class="section-seven">
+      <div class="container vpn-container">
+        <h3>Here’s what our customers say about<br/>the Datacappy VPN & Browser!</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="feedback-card">
+              <div class="review-div">
+                <img class="avatar" src="../assets/staff-face1.png" alt='avatar' />
+                <div class="name-div">
+                  Jeremie
+                  <img src="../assets/star-5.png" alt="star" />
+                </div>
+              </div>
+              <div class="description">
+                “The Datacappy VPN is so easy to use! I downloaded it and was connected in seconds. I love reading articles without all the ads.”
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="feedback-card" style="margin-top: 40px">
+              <div class="review-div">
+                <img class="avatar" src="../assets/staff-face2.png" alt='avatar' />
+                <div class="name-div">
+                  Angelica
+                  <img src="../assets/star-5.png" alt="star" />
+                </div>
+              </div>
+              <div class="description">
+                “Protecting my privacy is more important than ever. With the VPN/Browser combo, I am loving the security and the speed.”
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="feedback-card">
+              <div class="review-div">
+                <img class="avatar" src="../assets/staff-face3.png" alt='avatar' />
+                <div class="name-div">
+                  Jonathan
+                  <img src="../assets/star-5.png" alt="star" />
+                </div>
+              </div>
+              <div class="description">
+                “Not having to set up an account was awesome. I was connected to the VPN and using the browser in one minute. It’s super fast!”
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="feedback-card" style="margin-top: 40px">
+              <div class="review-div">
+                <img class="avatar" src="../assets/staff-face4.png" alt='avatar' />
+                <div class="name-div">
+                  Paolo
+                  <img src="../assets/star-5.png" alt="star" />
+                </div>
+              </div>
+              <div class="description">
+                "I have tried a lot of other VPNs and this is the first one I really like. It's clean, easy-to-use interface is great and the integrated, private browser is a really cool feature I have been using a lot."
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-eight">
+      <div class="container vpn-container">
+        <h3>Choose a plan. We keep it simple.</h3>
+        <div class="plan-div">
+
+          <div class="plan-card">
+            <h6>Monthly Subscription</h6>
+            <h3>$12.99</h3>
+            <p class="price">$20 Save $7 Today</p>
+            <b-button class="btn-plan">TRY NOW</b-button>
+            <p class="description">
+              Lorem ipsum dolor amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt magna aliqua.
+            </p>
+          </div>
+
+          <div class="popular-card">
+            <p class="card-kind">MOST POPULAR</p>
+            <div class="plan-card">
+              <h6>Yearly Subscription</h6>
+              <h3>$129</h3>
+              <p class="price">$200 Save $70 Today</p>
+              <b-button class="btn-plan">go premium</b-button>
+              <p class="description">
+                Lorem ipsum dolor amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt magna aliqua.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-fag">
+      <div class="container vpn-container">
+        <h3>FAQ</h3>
+        <div class="accordion" role="tablist">
+          <b-card no-body class="faq-card">
+            <b-card-header header-tag="header" role="tab">
+              <b-button block v-b-toggle.accordion-1 class="btn-faq-collapse">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+                <img src="../assets/plus-icon.png" alt="plus" />
+              </b-button>
+            </b-card-header>
+            <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+              <b-card-body>
+                <b-card-text>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
+                </b-card-text>
+              </b-card-body>
+            </b-collapse>
+          </b-card>
+
+          <b-card no-body class="faq-card">
+            <b-card-header header-tag="header" role="tab">
+              <b-button block v-b-toggle.accordion-2 class="btn-faq-collapse">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit2?
+                <img src="../assets/plus-icon.png" alt="plus" />
+              </b-button>
+            </b-card-header>
+            <b-collapse id="accordion-2" visible accordion="my-accordion" role="tabpanel">
+              <b-card-body>
+                <b-card-text>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
+                </b-card-text>
+              </b-card-body>
+            </b-collapse>
+          </b-card>
+
+
+          <b-card no-body class="faq-card">
+            <b-card-header header-tag="header" role="tab">
+              <b-button block v-b-toggle.accordion-3 class="btn-faq-collapse">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit3?
+                <img src="../assets/plus-icon.png" alt="plus" />
+              </b-button>
+            </b-card-header>
+            <b-collapse id="accordion-3" visible accordion="my-accordion" role="tabpanel">
+              <b-card-body>
+                <b-card-text>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
+                </b-card-text>
+              </b-card-body>
+            </b-collapse>
+          </b-card>
+
+        </div>
+      </div>
+    </section>
     <!-- <Smoking />
     <Features />"
     <Video />
@@ -409,6 +567,249 @@ export default {
     }
   }
   
+  .section-seven {
+    background: url('../assets/bg-pane1.png') no-repeat center center;  
+    background-size: auto 80%;  
+    padding: 96px 0;
+
+    h3 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 47px;
+      line-height: 65px;
+      text-align: center;
+      color: #0B032D;
+      margin: 0 0 80px 0;
+    }
+
+    .feedback-card {
+      background: #FAFAFB;
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.07);
+      border-radius: 40px;
+      padding: 56px 60px 65px;
+
+      .review-div {
+        display: flex;
+        .avatar {
+          flex: 0 0 75px;
+          width: 75px;
+          height: 75px;
+          border-radius: 37.5px;
+          margin: 0 0 28px 0;
+        }
+        .name-div {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 40px;
+          color: #0B032D;
+          img {
+            margin: 20px 0 0 0;
+          }
+        }
+      }
+
+      .description {
+        margin: 38px 0 0 0;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        color: #505050;
+      }
+      
+    }
+  }
+
+  .section-eight {
+    padding: 111px 0;
+    background-color: rgba(207,218,232, 0.3);
+    background-image: url('../assets/bg-pane2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    h3 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 47px;
+      line-height: 70px;
+      text-align: center;
+      color: #0B032D;
+    }
+    .plan-div {
+      display: flex;
+      align-items: flex-end;      
+      margin: 40px 0 0 0;
+      justify-content: center;
+
+      .popular-card {
+        background: #2C5A90;
+        border-radius: 35px;
+        padding: 5px;
+        margin: 40px 40px 0;
+        
+        .card-kind {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 120%;
+          text-align: center;
+          letter-spacing: 0.3px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          margin: 13px 0 18px;
+        }
+      }
+
+      .plan-card {
+        width: 380px;        
+        background-color: #FFFFFF;
+        border-radius: 30px;
+        padding: 56px 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('../assets/bg-small-1.png');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 15px;        
+        background-size: 80% auto;
+
+        h6 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 120%;          
+          text-align: center;
+          color: #0B032D;
+          margin: 0;
+        }
+
+        h3 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 56px;
+          line-height: 50px;          
+          text-align: center;
+          color: #0B032D;
+          margin: 45px 0 0 0;
+        }
+
+        .price {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 120%;                    
+          text-align: center;
+          color: #505050;
+          margin: 27px 0 0 0;
+        }
+
+        .btn-plan {
+          background: #98CA4E;
+          border-radius: 25px;
+          width: 260px;
+          height: 50px;
+          display: flex;          
+          outline: none;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 32px;          
+          text-align: center;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          margin: 39px 0 0 0;
+        }
+
+        .description {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 35px;          
+          text-align: center;
+          color: #505050;
+          margin: 46px 0 0 0;
+        }
+      }
+    }
+  }
+
+  .section-fag {
+    padding: 121px 0;
+    h3 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 47px;
+      text-align: center;
+      color: #0B032D;
+      margin: 0 0 40px 0;
+    }
+
+    .faq-card {
+      background: #F3F6F9;
+      border-radius: 20px;
+      margin-bottom: 5px;
+      border: 0;
+
+      .card-header {
+        padding: 0;
+        border-bottom: 0;
+      }
+
+      .card-body {
+        padding: 10px 28px 50px;
+      }
+
+      .card-text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;        
+        color: #505050;
+      }
+    }
+
+    .btn-faq-collapse {
+      background: #F3F6F9;      
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 35px;
+      color: #0B032D;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      outline: none;
+      border: none;
+      padding-left: 28px;
+      padding-right: 28px;
+      border-radius: 0;
+      box-shadow: none;
+
+      img {
+        margin-left: auto;
+      }
+    }
+  }
 </style>
 
 
