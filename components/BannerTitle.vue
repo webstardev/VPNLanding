@@ -32,6 +32,7 @@ export default {
   width: 100%;
   height: 395px;
   padding-top: 76px;
+  padding-bottom: 50px;
 
   .vpn-container {
     display: flex;
@@ -67,6 +68,7 @@ export default {
     flex: 0 0 137px;
     img {
       width: 100%;
+      margin-top: -15px;
     }
   }
 
@@ -104,6 +106,10 @@ export default {
     .logo-div {
       display: none;
     }
+  }
+
+  @media screen and (max-width: 479px) {
+    height: auto;
   }
 }
 </style>

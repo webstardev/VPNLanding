@@ -3,25 +3,25 @@
     <BannerTitle
       title="Get your head out of the sand"
       description="Stay informed and learn ways to protect your privacy"
-    />
-    <b-container>
+    >
+      <app-buttons :wrapperClass="`app-btn-wrapper`"></app-buttons>
+    </BannerTitle>
+    <b-container class="articles-container">
       <div class="small-container">
         <template
           v-for="(post, index) in posts"           
         >
           <b-card v-if="index>= perPage * (currentPage-1) && index <perPage * (currentPage)" :key="index" >
-            <b-card-body>
-              <b-card-title>
-                <div class="caption mb-2">
-                  {{ getPostDate(post.date) }}
-                </div>
-                <h2 class="text-center">
-                  <NuxtLink :to="'/articles/' + post.slug">
-                    <span v-html="post.title.rendered" />
-                  </NuxtLink>
-                </h2>
-              </b-card-title>
-            </b-card-body>
+            <b-card-title>
+              <div class="caption">
+                {{ getPostDate(post.date) }}
+              </div>
+              <h2>
+                <NuxtLink :to="'/articles/' + post.slug">
+                  <span v-html="post.title.rendered" />
+                </NuxtLink>
+              </h2>
+            </b-card-title>
 
             <b-card-img
               img-top
@@ -29,7 +29,7 @@
               :src="post._embedded['wp:featuredmedia'][0].source_url"
             />
             <b-card-text
-              class="mt-4 f-Roboto"
+              class="f-Roboto"
               v-html="post.excerpt ? post.excerpt.rendered : ''"
             ></b-card-text>            
 
@@ -37,8 +37,7 @@
               :to="'/articles/' + post.slug"
               class="card-link btn btn-outline f-Montserrat"
             >
-              READ MORE
-              <b-icon-arrow-right></b-icon-arrow-right>
+              READ MORE              
             </NuxtLink>
           </b-card>
         </template>
@@ -65,7 +64,7 @@ import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 
 export default {
   head: {
-    title: "Deep State Defender Articles",
+    title: "Datacappy VPN & Browser Articles",
     meta: [
       {
         hid: "description",
@@ -117,6 +116,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .articles-container {
   padding-top: 70px;
   padding-bottom: 80px;
@@ -128,10 +128,16 @@ export default {
 .card {
   background: transparent;
   border: none;
-  .card-title {
-    color: #fff;
+  .card-title {    
+    margin: 0;
+
     h2 {
-      font-size: 45px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;      
+      color: #0B032D;
+      margin: 10px 0 0 0;
     }
     @media (max-width: 991px) {
       h2 {
@@ -142,8 +148,12 @@ export default {
       color: #73fd05;
     }
     .caption {
-      color: #9ea1a6;
-      font-size: 14px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 30px;      
+      color: #505050;
     }
   }
   .card-img-top {
@@ -153,13 +163,34 @@ export default {
     object-fit: cover;
   }
   .card-text {
-    color: #9ea1a6;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 30px;
+    color: #505050;
+    margin: 20px 0 0 0;
   }
+
   .card-link {
-    .icon {
-      vertical-align: middle;
-    }
+    background: #98CA4E !important;
+    border-radius: 25px;
+    width: 170px;
+    height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0 0;
   }  
+}
+
+.app-btn-wrapper {
+  margin: 55px 0 0 0;
+
+  @media screen and (max-width: 1279px) {
+    margin-top: 25px;
+  }
 }
 </style>
 
@@ -172,7 +203,7 @@ export default {
     }      
     .page-link {
       color: white;
-      background-color:  #121314;
+      background-color: #98CA4E;
       &.active {
         color: #73fd05;
       }
@@ -180,7 +211,7 @@ export default {
     .page-item {
       &.disabled {
         .page-link {
-          background-color: rgb(29, 29,29);
+          background-color: #98CA4E;
         }
       }
     }

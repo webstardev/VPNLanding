@@ -13,12 +13,12 @@
             <div class="staff-imagewrapper">
               <img
                 :src="require('../assets/staff-mark1.png')"
-                alt="Deep State Defender Testimonial 1"
+                alt="Datacappy VPN & Browser Testimonial 1"
                 class="staff-mark"
               />
               <img
                 :src="require('../assets/staff-face1.png')"
-                alt="Deep State Defender Testimonial 2"
+                alt="Datacappy VPN & Browser Testimonial 2"
                 class="w-100 position-relative"
               />
             </div>
@@ -27,7 +27,7 @@
             </div>
           </div>
           <div class="staff-words">
-            “Deep State Defender’s blocking tools are awesome! The app is easy
+            “Datacappy VPN & Browser’s blocking tools are awesome! The app is easy
             to use and you can select your blocking options from a quick pop-up
             list. Imagine reading a full article on a news site without ads
             getting in the way or being tracked by cookies. I love it.”
@@ -39,12 +39,12 @@
             <div class="staff-imagewrapper">
               <img
                 :src="require('../assets/staff-mark2.png')"
-                alt="Deep State Defender Testimonial 3"
+                alt="Datacappy VPN & Browser Testimonial 3"
                 class="staff-mark"
               />
               <img
                 :src="require('../assets/staff-face2.png')"
-                alt="Deep State Defender Testimonial 4"
+                alt="Datacappy VPN & Browser Testimonial 4"
                 class="w-100 position-relative"
               />
             </div>
@@ -65,12 +65,12 @@
             <div class="staff-imagewrapper">
               <img
                 :src="require('../assets/staff-mark3.png')"
-                alt="Deep State Defender Testimonial 5"
+                alt="Datacappy VPN & Browser Testimonial 5"
                 class="staff-mark"
               />
               <img
                 :src="require('../assets/staff-face3.png')"
-                alt="Deep State Defender Testimonial 6"
+                alt="Datacappy VPN & Browser Testimonial 6"
                 class="w-100 position-relative"
               />
             </div>
@@ -79,7 +79,7 @@
             </div>
           </div>
           <div class="staff-words">
-            “Deep State Defender is fast and private. I downloaded it and
+            “Datacappy VPN & Browser is fast and private. I downloaded it and
             started using it right away. Being able to turn on the VPN with one
             tap and access the internet with the built-in private browser is my
             favorite part and makes me feel ultra-secure.”

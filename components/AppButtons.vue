@@ -39,6 +39,9 @@
 <style scoped lang="scss">
 	.component-container {
 		display: flex;
+		@media screen and (max-width: 479px) {
+			flex-direction: column;
+		}
 	}
 
 	.btn-app {
@@ -56,6 +59,10 @@
 
 		&.apple {
 			margin: 0 0 0 20px;
+
+			@media screen and (max-width: 479px) {
+				margin: 0;
+			}
 		}
 
 		.btn-text {
@@ -87,6 +94,10 @@
 				color: #FFFFFF;
 				margin: 8px 0 0 0;
 			}
+		}
+
+		@media screen and (max-width: 479px) {
+			margin-bottom: 20px;
 		}
 	}		
 </style>

@@ -50,7 +50,7 @@
 export default {
   layout: "pages",
   head: {
-    title: "About Deep State Defender",
+    title: "About Datacappy VPN & Browser",
     meta: [
       {
         hid: "description",
@@ -104,6 +104,10 @@ body .btn {
 
 .app-btn-wrapper {
   margin: 55px 0 0 0;
+
+  @media screen and (max-width: 1279px) {
+    margin-top: 25px;
+  }
 }
 
 .wp-content {

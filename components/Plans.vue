@@ -13,7 +13,7 @@
               <div class="plan-normal-wrapper">
                 <img
                   :src="require('../assets/plan-normal.png')"
-                  alt="Deep State Defender Plans"
+                  alt="Datacappy VPN & Browser Plans"
                 />
                 <div class="plan-text-monthly">
                   Monthly Subscription
@@ -55,7 +55,7 @@
               <div class="plan-premium-wrapper">
                 <img
                   :src="require('../assets/plan-premium.png')"
-                  alt="Deep State Defender Premium Plan"
+                  alt="Datacappy VPN & Browser Premium Plan"
                 />
                 <div class="plan-text-yearly">
                   Yearly Subscription

@@ -34,12 +34,12 @@ import axios from "axios";
 
 export default {
   head: {
-    title: 'Download Deep State Defender',
+    title: 'Download Datacappy VPN & Browser',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: 'Deep State Defender for Windows, DS Defender for Windows'
+        content: 'Datacappy VPN & Browser for Windows, Datacappy for Windows'
       }
     ],
   },

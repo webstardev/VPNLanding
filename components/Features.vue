@@ -38,7 +38,7 @@
         <div class="col-12 col-md-6 text-right my-auto d-none d-md-block">
           <img
             :src="require('../assets/features-noaccount.png')"
-            alt="Deep State Defender No Account Needed"
+            alt="Datacappy VPN & Browser No Account Needed"
             class="col-12 col-lg-10"
           />
         </div>
@@ -134,7 +134,7 @@
         <div class="col-12 col-md-6 text-left pb-5 my-auto d-none d-md-block">
           <img
             :src="require('../assets/features-freeamount.png')"
-            alt="Deep State Defender Features"
+            alt="Datacappy VPN & Browser Features"
             class="col-12 col-lg-10"
           />
         </div>
@@ -224,7 +224,7 @@
         <div class="col-12 col-md-6 text-right my-auto d-none d-md-block">
           <img
             :src="require('../assets/features-premium.png')"
-            alt="Deep State Defender Premium"
+            alt="Datacappy VPN & Browser Premium"
             class="col-12 col-lg-10"
           />
         </div>
