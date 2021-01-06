@@ -90,4 +90,37 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  #nav-collapse {
+    background: #005A93;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 10px;
+
+    .nav-link {
+      padding-left: 30px;
+      padding-right: 30px;      
+    }
+
+    a.nav-link {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);        
+    }
+
+    .nav-item {
+      &:last-child {
+        a.nav-link {
+          border: none;
+          padding-bottom: 20px;
+        }   
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header-title {
+    display: none;
+  }
+}
 </style>
