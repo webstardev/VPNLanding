@@ -95,6 +95,11 @@ export default {
 .vpn-container {
   padding-top: 136px;
   padding-bottom: 76px;
+
+  @media screen and (max-width: 1279px) {
+    padding-top: 68px;
+    padding-bottom: 38px;
+  }
 }
 
 .btn-free-trial {
@@ -106,6 +111,13 @@ export default {
 
 .btn-download {
   margin: 60px 0 0 0;
+  @media screen and (max-width: 1279px) {
+    margin-top: 25px
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 25px auto 0;
+  }
 }
 
 h1 {
@@ -117,6 +129,11 @@ h1 {
   color: #0B032D;
   max-width: 300px;
   margin: 0;
+
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 p {
@@ -128,6 +145,16 @@ p {
   color: #505050;
   margin: 30px 0 0 0;
   max-width: 500px;
+
+  @media screen and (max-width: 1279px) {
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+    text-align: center;
+  }
+
 }
 
 </style>

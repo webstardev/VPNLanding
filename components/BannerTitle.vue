@@ -35,7 +35,11 @@ export default {
 
   .vpn-container {
     display: flex;
+  }
 
+  .main-content {
+    display: flex;
+    flex-direction: column;
   }
 
   h1 {
@@ -80,6 +84,25 @@ export default {
       width: 100px;
       height: 250px;
       flex: 0 0 100px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1 1 100%;
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+
+    .logo-div {
+      display: none;
     }
   }
 }
