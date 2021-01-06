@@ -46,7 +46,7 @@
 
 <style lang="scss" scoped>
 .footer-wrapper {
-  margin: 0;
+  margin: auto 0 0 0;
   background-color: #2C5A90;
 
   .container {

@@ -21,8 +21,8 @@
             Download
           </b-button>        
         </div>
-        <div class="col-md-6">
-          <!-- <img src="../assets" -->
+        <div class="col-md-6 laptop-div">
+          <img src="../assets/laptop_img.png" alt="laptop" />
         </div>
       </div>      
     </div>
@@ -154,7 +154,17 @@ p {
     max-width: 100%;
     text-align: center;
   }
+}
 
+.laptop-div {
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 </style>

@@ -1,17 +1,8 @@
 <template>
   <div>
-    <BannerTitle
-      title="Get your head out of the sand"
-      description="Stay informed and learn ways to protect your privacy"
-    />
     <div class="articles-container small-container">
-      <b-card v-if="!loading">
+      <b-card v-if="!loading" class="article-card">
         <b-card-body>
-          <b-card-img
-            img-top
-            v-if="post._embedded && post._embedded['wp:featuredmedia']"
-            :src="post._embedded['wp:featuredmedia'][0].source_url"
-          />
 
           <b-card-title>
             <div class="caption mt-2">
@@ -21,6 +12,12 @@
               <span v-html="post.title ? post.title.rendered : ''" />
             </h2>
           </b-card-title>
+
+          <b-card-img
+            img-top
+            v-if="post._embedded && post._embedded['wp:featuredmedia']"
+            :src="post._embedded['wp:featuredmedia'][0].source_url"
+          />
 
           <b-card-text
             v-html="post.content ? post.content.rendered : ''"
@@ -50,14 +47,14 @@
 
     <div class="releated-post">
       <div class="container">
-        <h2 class="section-title">More like this</h2>
+        <h2 class="section-title text-center">More like this</h2>
         <div class="row">
           <div
-            class="col-sm-6 col-lg-3 mb-5 mb-lg-0"
+            class="col-sm-6 col-md-4 col-lg-4"
             v-for="(post, index) in releatedPosts"
-            :key="index"
+            :key="index"            
           >
-            <b-card>
+            <b-card v-if="index < 3">
               <b-card-body>
                 <b-card-img
                   img-top
@@ -68,7 +65,7 @@
                   <div class="caption">
                     {{ getPostDate(post.date) }}
                   </div>
-                  <h2 class="m-0">
+                  <h2>
                     <NuxtLink :to="'/articles/' + post.slug">
                       <span v-html="post.title ? post.title.rendered : ''" />
                     </NuxtLink>
@@ -84,7 +81,6 @@
                   class="card-link btn btn-outline f-Montserrat"
                 >
                   READ MORE
-                  <b-icon-arrow-right></b-icon-arrow-right>
                 </NuxtLink>
               </b-card-body>
             </b-card>
@@ -101,7 +97,6 @@ import moment from "moment";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
-
 
 export default {
   layout: "pages",
@@ -202,80 +197,163 @@ export default {
 .articles-container {
   padding-top: 70px;
   padding-bottom: 80px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
 }
-.card {
-  background: transparent;
+.article-card {
+  background: transparent;  
   border: none;
-  .card-title {
-    color: #fff;
+  
+  .card-title {    
+    margin: 0;
     h2 {
-      font-size: 45px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 47px;
+      text-align: center;
+      color: #0B032D;
+      margin: 26px 0 0 0;
+
+      @media screen and (max-width: 767px) {
+        margin: 13px 0 0 0;
+      }
     }
+
     a:hover {
       color: #73fd05;
     }
     .caption {
-      color: #9ea1a6;
-      font-size: 14px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      color: #505050;
     }
   }
-  .card-img-top {
+  .card-img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 20px;
     object-fit: cover;
-  }
-  .card-text {
-    color: #9ea1a6;
-  }
-  .card-link {
-    .icon {
-      vertical-align: middle;
+    margin: 60px 0 0 0;
+    @media screen and (max-width: 767px) { 
+      margin: 30px 0 0 0;
     }
   }
+
+  .card-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;    
+    color: #505050;
+    margin: 45px 0 0 0;
+    @media screen and (max-width: 767px) {
+      margin: 20px 0 0 0;
+    }
+  }
+
 }
 .section-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  position: relative;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 48px;
-  text-transform: uppercase;
-  color: #9ea1a6;
-  margin-bottom: 70px;
-  @media (max-width: 991px) {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-  &:before {
-    position: absolute;
-    top: 50%;
-    background: #9ea1a6;
-    left: -540px;
-    content: "";
-    width: 500px;
-    height: 1px;
-    display: table;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 47px;  
+  color: #0B032D;
+  margin: 0 0 80px 0;
+
+  @media screen and (max-width: 1279px) {
+    font-size: 32px;
+    margin: 0 0 40px 0;
   }
 }
+
 .releated-post {
-  background: #121314;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  background-color: rgba(207,218,232, 0.3);
+  padding-top: 112px;
+  padding-bottom: 112px;
   @media (max-width: 991px) {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
+  .card {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    margin-bottom: 30px;
+    .card-body {
+      padding: 0;
+    }
+  }
+
   .card-title {
+    margin: 0;
     h2 {
-      font-size: 24px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      color: #0B032D;
+      margin: 18px 0 0 0;    
     }
   }
   .card-text {
     font-size: 14px;
   }
-  .card-img-top {
-    height: 100px;
+  .card-img {
+    border-radius: 20px;
   }
+
+  .caption {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: #505050;
+    margin: 15px 0 0 0;
+  }
+
+  .card-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;    
+    color: #505050;
+    margin: 19px 0 0 0;
+    p {
+      margin: 0;
+    }
+  }
+
+  .card-link {
+    background: #98CA4E;
+    border-radius: 25px;
+    width: 170px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 32px;    
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+    outline: none;    
+  }
+}
+</style>
+
+<style>
+.button-social {
+  border-radius: 20px !important;
 }
 </style>
