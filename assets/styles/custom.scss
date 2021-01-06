@@ -69,7 +69,11 @@ $theme-colors: (primary: $black, secondary: $gray-600, success: $green, info: $c
 
   .vpn-container {
     max-width: 1280px !important;
-  }
+
+    @media screen and (max-width: 1279px) {
+      max-width: 100% !important;
+    }
+  }  
 
 //then bootstrap & bootstrap-vue should be added after 
 //so that they inherit the custom SCSS variables

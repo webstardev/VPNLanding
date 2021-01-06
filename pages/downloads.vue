@@ -70,7 +70,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang='scss'>
 .btn-vpn {
   width: 260px;
   height: 50px;
@@ -99,6 +99,9 @@ export default {
 
 .btn-free-trial {
   margin: 55px 0 0 0;
+  @media screen and (max-width: 1279px) {
+    margin-top: 25px
+  }
 }
 
 .btn-download {

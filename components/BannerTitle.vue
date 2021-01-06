@@ -66,11 +66,20 @@ export default {
     }
   }
 
-  @media (max-width: 991px) {
-    padding-top: 30px;
-    padding-bottom: 36px;
+  @media screen and (max-width: 1279px) {
+    height: 240px;
+    padding-top: 38px;
     h1 {
       font-size: 36px;
+    }
+    p {
+      font-size: 18px;
+    }
+
+    .logo-div {
+      width: 100px;
+      height: 250px;
+      flex: 0 0 100px;
     }
   }
 }
