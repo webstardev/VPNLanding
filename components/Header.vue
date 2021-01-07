@@ -39,7 +39,9 @@
 
 .header-wrapper {
   background: #005A93;
-  height: 90px;
+  max-height: 90px;
+  height: auto;
+  z-index: 1;
 
   .vpn-container {
     padding-top: 10px;

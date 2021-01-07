@@ -99,8 +99,18 @@ import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 
 export default {
-  layout: "pages",
 
+  layout: "pages",
+  async asyncData({ params, $http }) {
+    const response = await axios
+    .get(`https://wp.dsdefender.com/wp-json/wp/v2/posts?slug=${params.slug}`, {
+      params: {
+        context: "view",
+        _embed: true
+      }
+    })
+    return {post: response.data[0] || {}}
+  },
   data() {
     return {
       sharing: {},
@@ -128,42 +138,40 @@ export default {
     VueGoodshareTwitter,
     VueGoodshareReddit
   },
-  watch: {
-    "$route.params.slug": function() {
-      this.getRecentPost();
-    }
-  },
+  // watch: {
+  //   "$route.params.slug": function() {
+  //     this.getRecentPost();
+  //   }
+  // },
 
   methods: {
     // Get Recent Posts From WordPress Site
-    getRecentPost() {
-      this.loading = true;
-      const slug = this.$route.params.slug;
-      axios
-        .get(`https://wp.dsdefender.com/wp-json/wp/v2/posts?slug=${slug}`, {
-          params: {
-            context: "view",
-            _embed: true
-          }
-        })
-        .then(response => {
-          this.loading = false
-          this.post = response.data[0] || {};
+    // async getRecentPost() {
+    //   this.loading = true;
+    //   const slug = this.$route.params.slug;
+    //   try {
 
-          // console.log(this.post);
-
-          this.getReleatedPost();
-        })
-        .catch(error => {
-          this.loading = false;
-          console.log(error);          
-        });
-    },
+    //     const resPost = await axios
+    //     .get(`https://wp.dsdefender.com/wp-json/wp/v2/posts?slug=${slug}`, {
+    //       params: {
+    //         context: "view",
+    //         _embed: true
+    //       }
+    //     })
+    //     if (resPost) {
+    //       this.loading = false
+    //       this.post = response.data[0] || {};
+    //     }                
+    //   }catch (err){
+    //     this.loading = false;
+    //     console.log(err);  
+    //   }
+    // },
     getReleatedPost() {
       axios
         .get(`https://wp.dsdefender.com/wp-json/wp/v2/posts`, {
           params: {
-            per_page: 4,
+            per_page: 3,
             page: 1,
             _embed: true
           }
@@ -184,10 +192,12 @@ export default {
       }
     }
 
+  },  
+  created() {
+    // this.getRecentPost();
+    this.getReleatedPost();
   },
   mounted() {
-    this.getRecentPost();
-    this.getReleatedPost();
     this.getUrlFromRoute();
   }
 };

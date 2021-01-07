@@ -56,6 +56,7 @@
 		height: 50px;
 		outline: none;
 		border: none;
+		text-decoration: none;
 
 		&.apple {
 			margin: 0 0 0 20px;

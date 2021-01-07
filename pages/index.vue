@@ -34,7 +34,7 @@
     <section class="section-three">
       <div class="container vpn-container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 img-div">
             <img class="panel-img" src="../assets/mobile-map.png" alt="Mobile Map" />
           </div>
           <div class="col-md-6">
@@ -104,7 +104,7 @@
             </ul>
             <app-buttons :wrapperClass="`app-buttons-wrapper`"></app-buttons>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 img-div" >
             <img src="../assets/mobile-duck.png" alt="Mobile duck"/>
           </div>
         </div>
@@ -152,7 +152,7 @@
 
     <section class="section-seven">
       <div class="container vpn-container">
-        <h3>Here’s what our customers say about<br/>the Datacappy VPN & Browser!</h3>
+        <h3>Here’s what our customers say about the Datacappy VPN & Browser!</h3>
         <div class="row">
           <div class="col-md-6">
             <div class="feedback-card">
@@ -326,6 +326,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  @media screen and (max-width: 479px) {
+    h3 {
+      font-size: 28px !important;
+    }
+  }
   .banner-section {
     width: 100%;
     background: url('../assets/bg-1.png') no-repeat;
@@ -333,6 +339,14 @@ export default {
     background-size: 100% 100%;
     background-color: rgba(207,218,232, 0.3);
     padding: 57px 0 300px;
+
+    @media screen and (max-width: 1023px) {
+      padding-bottom: 160px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 30px 0 160px;
+    }
 
     .left-panel {
       display: flex;
@@ -371,9 +385,37 @@ export default {
       .app-button-div {
         margin: 60px 0 0 0;
       }
+
+      @media screen and (max-width: 767px) {
+        align-items: center;
+
+        .logo {
+          display: none;
+        }
+        h3 {
+          font-size: 32px;
+          line-height: 32px;
+          text-align: center;
+        }
+        p {
+          margin-top: 20px;
+          text-align: center;
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
     }
 
     .right-panel {
+
+      @media screen and (max-width: 1279px) {
+        display: flex;  
+        align-items: center;
+      }
+
+      @media screen and (max-width: 767px) {        
+        display: none;        
+      }
       .img-mobile {
         width: 100%;
       }
@@ -383,6 +425,11 @@ export default {
 
   .keep-section {
     margin-top: -150px;
+
+    @media screen and (max-width: 1023px) {
+      margin-top: -80px;
+    }
+
     .keep-div {
       width: 100%;
       max-width: 1220px;
@@ -414,10 +461,53 @@ export default {
         }
       }
     }
+
+    @media screen and (max-width: 1023px) {
+      .keep-div {
+        height: 160px;
+        padding: 40px 0;
+        h3 {
+          font-size: 32px;
+        }
+
+        img {
+          width: 50px;
+          height: 32px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .keep-div {
+        img {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 479px) {
+      .keep-div {
+        height: 100px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        h3 {
+          font-size: 20px !important;
+        }
+      }      
+    }
   }
 
   .section-three {
     padding-top: 110px;
+
+    @media screen and (max-width: 1279px) {
+      padding-top: 40px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding-top: 0;
+    }
 
     .panel-img {
       width: 100%;
@@ -432,15 +522,46 @@ export default {
       align-items: center;
       color: #0B032D;
       margin: 0 0 68px 0;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 32px;
+        margin-bottom: 39px;
+      }
+    }
+
+    .img-div {
+      img {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        padding-bottom: 40px;
+      }
     }
 
     .app-buttons-wrapper {
       margin: 22px 0 0 105px;
+
+      @media screen and (max-width: 1279px) {
+        margin: 22px 0 0 57px;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 
   .section-four {
     padding: 111px 0 120px;
+
+    @media screen and (max-width: 1279px) {
+      padding: 55px 0 60px;
+    }
+
 
     h3 {
       font-family: Montserrat;
@@ -451,10 +572,32 @@ export default {
       align-items: center;
       color: #0B032D;
       margin: 0 0 76px 0;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 32px;
+        margin-bottom: 38px;
+      }
+    }
+
+    .img-div {
+      img {
+        width: 100%;
+      }
     }
 
     .app-buttons-wrapper {
       margin: 22px 0 0 105px;
+
+      @media screen and (max-width: 1279px) {
+        margin: 22px 0 0 57px;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 
@@ -465,6 +608,11 @@ export default {
     background: url('../assets/bg_small.png') no-repeat;
     padding: 85px 0;
 
+    @media screen and (max-width: 1279px) {
+      padding: 40px 0;
+      height: auto;
+    }
+
     h3 {
       font-family: Montserrat;
       font-style: normal;
@@ -473,16 +621,29 @@ export default {
       line-height: 50px;
       color: #98CA4E;
       margin: 0 0 43px 0;
+
+      @media screen and (max-width: 1279px) { 
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 20px;
+      }
     }
     .content {
       display: flex;
 
       .description-div {
         flex: 1 1 100%;
+                
         img {
           width: 30px;
           height: 30px;
           margin-right: 18px;
+
+          @media screen and (max-width: 1279px) {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;            
+          }
         }
         .check-line {
           display: flex;
@@ -492,11 +653,25 @@ export default {
           font-size: 24px;
           line-height: 40px;          
           color: #DAE5F1;
+          @media screen and (max-width: 1279px) {
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: 20px;
+          }
+
+          @media screen and (max-width: 479px) {
+            font-size: 18px;
+          }
         }
       }
 
       .logo-div {        
         flex: 0 0 141px;
+
+        @media screen and (max-width: 1023px) {
+          display: none;
+        }
+
         img {
           width: 141px;
           height: 195px;
@@ -513,6 +688,7 @@ export default {
     flex-direction: column;
     list-style: none;
     padding: 0;
+    margin: 0;
 
     li {
       font-family: Roboto;
@@ -538,12 +714,33 @@ export default {
         align-items: center;    
         margin: 0 40px 0 0;
       }
+
+      @media screen and (max-width: 1279px) {
+        margin-bottom: 29px;
+        font-size: 16px;
+        .icon-div {
+          flex: 0 0 37px;          
+          width: 37px;
+          height: 37px;
+          border-radius: 8px;
+          margin: 0 20px 0 0;
+          img {
+            width: 60%;
+          }
+        }
+      }
+
     }    
   }
 
   .section-six {
     background: rgba(207,218,232,0.3);
     padding: 112px 0 120px;
+
+    @media screen and (max-width: 1279px) {
+      padding: 56px 0 60px;
+    }
+
     h3 {
       font-family: Montserrat;
       font-style: normal;
@@ -552,6 +749,10 @@ export default {
       text-align: center;
       color: #0B032D;
       margin: 0 0 22px 0;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 32px;
+      }
     }
     h6 {
       font-family: Montserrat;
@@ -561,9 +762,17 @@ export default {
       text-align: center;
       color: #0B032D;
       margin: 0;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 20px;
+      }
     }
     video {
       margin-top: 80px;
+
+      @media screen and (max-width: 1279px) {
+        margin-top: 40px;
+      }
     }
   }
   
@@ -571,6 +780,10 @@ export default {
     background: url('../assets/bg-pane1.png') no-repeat center center;  
     background-size: auto 80%;  
     padding: 96px 0;
+
+    @media screen and (max-width: 1279px) {
+      padding: 40px 0;
+    }
 
     h3 {
       font-family: Montserrat;
@@ -580,7 +793,14 @@ export default {
       line-height: 65px;
       text-align: center;
       color: #0B032D;
-      margin: 0 0 80px 0;
+      margin: 0 auto 80px auto;
+      max-width: 600px;
+
+      @media screen and (max-width: 1279px) {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 40px;
+      }
     }
 
     .feedback-card {
@@ -589,6 +809,14 @@ export default {
       border-radius: 40px;
       padding: 56px 60px 65px;
 
+      @media screen and (max-width: 1279px) {
+        padding: 28px 30px 37px;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin: 0 0 30px 0 !important;
+      }
+
       .review-div {
         display: flex;
         .avatar {
@@ -596,7 +824,7 @@ export default {
           width: 75px;
           height: 75px;
           border-radius: 37.5px;
-          margin: 0 0 28px 0;
+          margin: 0 28px 0 0;          
         }
         .name-div {
           font-family: Montserrat;
@@ -605,8 +833,12 @@ export default {
           font-size: 24px;
           line-height: 40px;
           color: #0B032D;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
           img {
-            margin: 20px 0 0 0;
+            margin: 0;
           }
         }
       }
@@ -619,6 +851,10 @@ export default {
         font-size: 20px;
         line-height: 30px;
         color: #505050;
+
+        @media screen and (max-width: 1279px) {
+          margin-top: 20px;
+        }
       }
       
     }
@@ -631,14 +867,20 @@ export default {
     background-repeat: no-repeat;
     background-position: center center;
 
+    @media screen and (max-width: 1279px) {
+      padding: 40px 0;
+    }
+
     h3 {
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 47px;
-      line-height: 70px;
+      font-size: 47px;      
       text-align: center;
       color: #0B032D;
+      @media screen and (max-width: 1279px) {
+        font-size: 32px;        
+      }
     }
     .plan-div {
       display: flex;
@@ -646,12 +888,22 @@ export default {
       margin: 40px 0 0 0;
       justify-content: center;
 
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .popular-card {
         background: #2C5A90;
         border-radius: 35px;
         padding: 5px;
         margin: 40px 40px 0;
-        
+
+        @media screen and (max-width: 767px) {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
         .card-kind {
           font-family: Montserrat;
           font-style: normal;
@@ -681,6 +933,15 @@ export default {
         background-position-y: 15px;        
         background-size: 80% auto;
 
+        @media screen and (max-width: 1279px) {
+          padding: 28px 25px;
+        }
+
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          max-width: 380px;
+        }
+
         h6 {
           font-family: Montserrat;
           font-style: normal;
@@ -690,6 +951,11 @@ export default {
           text-align: center;
           color: #0B032D;
           margin: 0;
+
+          @media screen and (max-width: 1279px) {
+            font-size: 16px;
+          }
+
         }
 
         h3 {
@@ -701,6 +967,12 @@ export default {
           text-align: center;
           color: #0B032D;
           margin: 45px 0 0 0;
+
+          @media screen and (max-width: 1279px) {
+            font-size: 38px;
+            margin-top: 25px;
+            line-height: 120%;
+          }
         }
 
         .price {
@@ -712,6 +984,10 @@ export default {
           text-align: center;
           color: #505050;
           margin: 27px 0 0 0;
+
+          @media screen and (max-width: 1279px) {
+            margin-top: 13px;
+          }
         }
 
         .btn-plan {
@@ -734,6 +1010,10 @@ export default {
           text-transform: uppercase;
           color: #FFFFFF;
           margin: 39px 0 0 0;
+
+          @media screen and (max-width: 1279px) {
+            margin-top: 20px;
+          }
         }
 
         .description {
@@ -745,6 +1025,12 @@ export default {
           text-align: center;
           color: #505050;
           margin: 46px 0 0 0;
+
+          @media screen and (max-width: 1279px) {
+            margin-top: 23px;
+            font-size: 16px;
+            line-height: 150%;
+          }
         }
       }
     }
@@ -752,6 +1038,11 @@ export default {
 
   .section-fag {
     padding: 121px 0;
+
+    @media screen and (max-width: 1279px) {
+      padding: 40px 0;
+    }
+
     h3 {
       font-family: Montserrat;
       font-style: normal;
@@ -760,6 +1051,10 @@ export default {
       text-align: center;
       color: #0B032D;
       margin: 0 0 40px 0;
+      @media screen and (max-width: 1279px) {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
     }
 
     .faq-card {
@@ -792,10 +1087,10 @@ export default {
       font-family: Montserrat;
       font-style: normal;
       font-weight: 600;
-      font-size: 20px;
-      line-height: 35px;
+      font-size: 20px;      
       color: #0B032D;
-      height: 75px;
+      max-height: 75px;
+      height: auto;
       display: flex;
       align-items: center;
       outline: none;
@@ -804,9 +1099,15 @@ export default {
       padding-right: 28px;
       border-radius: 0;
       box-shadow: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
 
       img {
         margin-left: auto;
+      }
+
+      @media screen and (max-width: 1279px) {
+        font-size: 16px;
       }
     }
   }
