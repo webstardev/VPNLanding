@@ -308,10 +308,6 @@
         </div>
       </div>
     </section>
-    <!-- <Smoking />
-    <Features />"
-    <Video />
-    <Staff />       -->
   </div>
 </template>
 
