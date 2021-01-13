@@ -146,27 +146,27 @@ export default {
 
   methods: {
     // Get Recent Posts From WordPress Site
-    // async getRecentPost() {
-    //   this.loading = true;
-    //   const slug = this.$route.params.slug;
-    //   try {
+    async getRecentPost() {
+      this.loading = true;
+      const slug = this.$route.params.slug;
+      try {
 
-    //     const resPost = await axios
-    //     .get(`https://wp.dsdefender.com/wp-json/wp/v2/posts?slug=${slug}`, {
-    //       params: {
-    //         context: "view",
-    //         _embed: true
-    //       }
-    //     })
-    //     if (resPost) {
-    //       this.loading = false
-    //       this.post = response.data[0] || {};
-    //     }                
-    //   }catch (err){
-    //     this.loading = false;
-    //     console.log(err);  
-    //   }
-    // },
+        const resPost = await axios
+        .get(`https://wp.dsdefender.com/wp-json/wp/v2/posts?slug=${slug}`, {
+          params: {
+            context: "view",
+            _embed: true
+          }
+        })
+        if (resPost) {
+          this.loading = false
+          this.post = response.data[0] || {};
+        }                
+      }catch (err){
+        this.loading = false;
+        console.log(err);  
+      }
+    },
     getReleatedPost() {
       axios
         .get(`https://wp.dsdefender.com/wp-json/wp/v2/posts`, {
@@ -194,7 +194,7 @@ export default {
 
   },  
   created() {
-    // this.getRecentPost();
+    this.getRecentPost();
     this.getReleatedPost();
   },
   mounted() {

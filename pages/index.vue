@@ -37,7 +37,7 @@
           <div class="col-md-6 img-div">
             <img class="panel-img" src="../assets/mobile-map.png" alt="Mobile Map" />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 d-flex flex-column">
             <h3>The Datacappy VPN</h3>
             <ul class="list-ul">
               <li>
@@ -74,7 +74,11 @@
     <section class="section-four">
       <div class="container vpn-container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 img-div mobile mb-4" >
+            <img src="../assets/mobile-duck.png" alt="Mobile duck"/>
+          </div>
+
+          <div class="col-md-6 d-flex flex-column">
             <h3>The Datacappy Browser</h3>
             <ul class="list-ul">
               <li>
@@ -104,7 +108,7 @@
             </ul>
             <app-buttons :wrapperClass="`app-buttons-wrapper`"></app-buttons>
           </div>
-          <div class="col-md-6 img-div" >
+          <div class="col-md-6 img-div desktop" >
             <img src="../assets/mobile-duck.png" alt="Mobile duck"/>
           </div>
         </div>
@@ -362,6 +366,7 @@ export default {
         color: #0B032D;
         max-width: 500px;
         margin: 40px 0 0 0;
+        font-family: 'Montserrat';
 
         span {
           color: #1d5595;
@@ -403,11 +408,8 @@ export default {
     }
 
     .right-panel {
-
-      @media screen and (max-width: 1279px) {
-        display: flex;  
-        align-items: center;
-      }
+      display: flex;  
+      align-items: center;      
 
       @media screen and (max-width: 767px) {        
         display: none;        
@@ -513,15 +515,18 @@ export default {
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 47px;      
-      display: flex;
+      font-size: 47px;            
       align-items: center;
       color: #0B032D;
-      margin: 0 0 68px 0;
+      margin: 0 0 68px 0;      
 
       @media screen and (max-width: 1279px) {
         font-size: 32px;
         margin-bottom: 39px;
+      }
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
       }
     }
 
@@ -556,16 +561,13 @@ export default {
 
     @media screen and (max-width: 1279px) {
       padding: 55px 0 60px;
-    }
-
+    }    
 
     h3 {
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 47px;            
-      display: flex;
-      align-items: center;
+      font-size: 47px;                        
       color: #0B032D;
       margin: 0 0 76px 0;
 
@@ -573,12 +575,34 @@ export default {
         font-size: 32px;
         margin-bottom: 38px;
       }
+
+      @media screen and (max-width: 1279px) {
+        text-align: center;
+      }
+
     }
 
     .img-div {
       img {
         width: 100%;
       }
+
+      &.desktop {
+        display: block;
+      }
+
+      &.mobile {
+        display: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        &.desktop {
+          display: none;
+        }
+        &.mobile {
+          display: block;
+        }
+      } 
     }
 
     .app-buttons-wrapper {
@@ -622,6 +646,10 @@ export default {
         font-size: 32px;
         line-height: 32px;
         margin-bottom: 20px;
+      }
+
+      @media screen and (max-width: 1279px) {
+        text-align: center;
       }
     }
     .content {
@@ -676,6 +704,13 @@ export default {
     }    
     .app-buttons-wrapper {
       margin: 28px 0 0 0;
+
+      @media screen and (max-width: 767px) {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 

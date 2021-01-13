@@ -209,6 +209,12 @@ export default {
       }
     }
     .page-item {
+      &.active {
+        .page-link {
+          color: #0B032D;
+          background-color: white;
+        }
+      }
       &.disabled {
         .page-link {
           background-color: #98CA4E;
